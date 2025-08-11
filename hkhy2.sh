@@ -130,71 +130,8 @@ cat > "$SINGBOX_CONFIG" <<EOF
     "ip.sb"      
     ],
     "outbound": "hk_proxy"
-  },
-     {
-    "domain_suffix": [
-      "linetv.tw",
-      "api.linetv.tw",
-      "d3c7rimkq79yfu.cloudfront.net",
-      "myvideo.net.tw",
-      "api.myvideo.net.tw",
-      "hichannel.hinet.net",
-      "friday.tw",
-      "video.friday.tw",
-      "api.friday.tw",
-      "vod.friday.tw",
-      "kktv.me",
-      "api.kktv.me",
-      "kktv.com.tw",
-      "kktv.videohub.tv",
-      "ptsplus.tv",
-      "api.ptsplus.tv",
-      "ottstream.ptsplus.tv",
-      "hamivideo.hinet.net",
-      "hamivideo.net",
-      "hamivideo.ott.hinet.net",
-      "hamivideo.ctitv.com.tw",
-      "hamivideo.api.hinet.net",
-      "4gtv.tv",
-      "openai.com",
-      "chat.openai.com",
-      "api.openai.com",
-      "platform.openai.com",
-      "cdn.openai.com",
-      "auth0.openai.com",
-      "claude.ai",
-      "poe.com",
-      "huggingface.co",
-      "hf.space",
-      "replicate.com",
-      "bard.google.com",
-      "gemini.google.com",
-      "aistudio.baidu.com",
-      "yiyan.baidu.com",
-      "you.com",
-      "copilot.microsoft.com",
-      "copilot.azureedge.net",
-      "githubcopilot.com",
-      "labs.perplexity.ai",
-      "perplexity.ai",
-      "groq.com",
-      "api.groq.com",
-      "models.ai21.com",
-      "cohere.ai",
-      "api.cohere.ai",
-      "openrouter.ai",
-      "dashscope.aliyuncs.com",
-      "spark-api.xf-yun.com",
-      "open.bigmodel.cn",
-      "mistral.ai",
-      "api.mistral.ai",
-      "api.anthropic.com",
-      "gemini-pa.googleapis.com",
-      "palm.googleapis.com",             
-      "ip.me"
-    ],
-    "outbound": "tw_proxy"
-  }                      
+  }
+                     
     ],
     "auto_detect_interface": true,
     "final": "direct-out"
@@ -276,53 +213,9 @@ cat > "$SINGBOX_CONFIG" <<EOF
       "server": "127.0.0.1",
       "server_port": 40000,
       "version": "5"
-    },
+    }
 
-{
-      "type": "hysteria2",
-      "server": "tw.8238683.xyz",         
-      "server_port": $PORT1,              
-      "password": "$PASSWORD",
-      "tls": {
-        "enabled": true,
-        "server_name": "tw.8238683.xyz",  
-        "insecure": true                  
-      },                  
-      "tag": "TW1"
-    },
-    {
-      "type": "hysteria2",
-      "server": "tw.8238683.xyz",         
-      "server_port": $PORT2,              
-      "password": "$PASSWORD",
-      "tls": {
-        "enabled": true,
-        "server_name": "tw.8238683.xyz",  
-        "insecure": true                  
-      },                 
-      "tag": "TW2"
-    },
-    {
-      "type": "hysteria2",
-      "server": "tw.8238683.xyz",         
-      "server_port": $PORT3,              
-      "password": "$PASSWORD",
-      "tls": {
-        "enabled": true,
-        "server_name": "tw.8238683.xyz",  
-        "insecure": true                  
-      },                  
-      "tag": "TW3"
-    } ,       
 
- {
-  "type": "urltest",
-  "tag": "tw_proxy",
-  "outbounds": ["Tw1", "Tw2","Tw3"],
-  "url": "https://www.gstatic.com/generate_204",
-  "interval": "5m",
-  "tolerance": 50
-}      
    
   ]
 
