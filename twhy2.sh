@@ -25,7 +25,7 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 # 获取用户输入的域名
-read -p "请输入你的域名 (例如 hk.8238683.xyz): " DOMAIN
+read -p "请输入你的域名 : " DOMAIN
 if [[ -z "$DOMAIN" ]]; then
     echo "❌ 域名不能为空，脚本终止"
     exit 1
